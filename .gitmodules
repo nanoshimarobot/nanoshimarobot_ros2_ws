@@ -2,3 +2,6 @@
 	path = src/ldlidar
 	url = https://github.com/linorobot/ldlidar
 	branch = ros2
+[submodule "src/voice_assistant"]
+	path = src/voice_assistant
+	url = https://github.com/nanoshimarobot/ros2_voice_assistant
