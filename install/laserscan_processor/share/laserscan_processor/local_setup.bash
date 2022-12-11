@@ -1,0 +1,1 @@
+/home/tutrobo/nanoshimarobot_ros2_ws/build/laserscan_processor/ament_cmake_environment_hooks/local_setup.bash

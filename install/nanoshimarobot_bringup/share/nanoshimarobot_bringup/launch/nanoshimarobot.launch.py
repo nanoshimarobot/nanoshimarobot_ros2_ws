@@ -1,0 +1,1 @@
+/home/tutrobo/nanoshimarobot_ros2_ws/src/nanoshimarobot_bringup/launch/nanoshimarobot.launch.py

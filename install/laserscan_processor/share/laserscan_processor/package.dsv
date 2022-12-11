@@ -1,0 +1,8 @@
+source;share/laserscan_processor/hook/cmake_prefix_path.ps1
+source;share/laserscan_processor/hook/cmake_prefix_path.dsv
+source;share/laserscan_processor/hook/cmake_prefix_path.sh
+source;share/laserscan_processor/local_setup.bash
+source;share/laserscan_processor/local_setup.dsv
+source;share/laserscan_processor/local_setup.ps1
+source;share/laserscan_processor/local_setup.sh
+source;share/laserscan_processor/local_setup.zsh
