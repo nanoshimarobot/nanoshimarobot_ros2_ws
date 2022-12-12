@@ -8,7 +8,7 @@ endif()
 
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 17)
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -16,10 +16,17 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 # find dependencies
-find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
+find_package(ament_cmake_auto)
+
+ament_auto_find_build_dependencies()
+
+ament_auto_add_library(${PROJECT_NAME}_component SHARED
+  src/${PROJECT_NAME}_component.cpp)
+
+rclcpp_components_register_nodes(${PROJECT_NAME}_component "nanoshimarobot::LaserscanProcessor")
+target_compile_options(${PROJECT_NAME}_component PUBLIC -Wall)
+
+ament_auto_add_executable(${PROJECT_NAME} src/main.cpp)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -32,4 +39,8 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-ament_package()
+install(
+  DIRECTORY "include/"
+)
+
+ament_auto_package()
