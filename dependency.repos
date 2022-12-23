@@ -1,0 +1,10 @@
+repositories:
+  voice_assistant:
+    type: git
+    url: https://github.com/nanoshimarobot/ros2_voice_assistant.git
+    version: master
+  
+  ldlidar:
+    type: git
+    url: https://github.com/linorobot/ldlidar.git
+    version: ros2
