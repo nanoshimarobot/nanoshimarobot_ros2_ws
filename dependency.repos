@@ -8,3 +8,8 @@ repositories:
     type: git
     url: https://github.com/linorobot/ldlidar.git
     version: ros2
+  
+  velodyne:
+    type: git
+    url: https://github.com/ros-drivers/velodyne
+    version: ros2
